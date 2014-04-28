@@ -19,17 +19,7 @@
 			</thead>
 			<g:each var="owner" in="${owners}">
 				<tr>
-					<td>
-						<g:link action="show" id="${owner.id}">${owner.firstName} ${owner.lastName}</g:link>
-					</td>
-					<td>${owner.address}</td>
-					<td>${owner.city}</td>
-					<td>${owner.telephone}</td>
-					<td>
-						<g:each var="pet" in="${owner.pets}">
-							${pet.name} &nbsp;
-						</g:each>
-					</td>
+					<owner:entry owner="${owner}"/>
 				</tr>
 			</g:each>
 		</table>
