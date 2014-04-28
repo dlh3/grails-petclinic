@@ -13,7 +13,7 @@
 					<th>
 						Last Name:
 						<br/>
-						<g:textField name="lastName"/>
+						<g:textField name="lastName" value="${id}" placeholder="* for all Owners"/>
 					<span class="errors"><g:message code="${message}"></g:message></span>
 					</th>
 				</tr>

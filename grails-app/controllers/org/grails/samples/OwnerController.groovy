@@ -49,18 +49,17 @@ class OwnerController {
 
 	def find() {
 		if (!request.post) {
-			return
+			return [id: params.id]
 		}
 
 		def owners = Owner.findAllByLastName(params.lastName)
 		if (!owners) {
-			return [message: 'owners.not.found']
+			return [id: params.lastName, message: 'owners.not.found']
 		}
 
 		if (owners.size() > 1) {
 			render view: 'selection', model: [owners: owners]
-		}
-		else {
+		} else {
 			redirect action: 'show', id: owners[0].id
 		}
 	}
