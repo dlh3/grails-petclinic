@@ -12,3 +12,9 @@
 .idea/
 *.iml
 out/
+
+
+### Eclipse changes
+.classpath
+.project
+target-eclipse/
