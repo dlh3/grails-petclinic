@@ -47,7 +47,6 @@ log4j = {
 
 // Uncomment and edit the following lines to start using Grails encoding & escaping improvements
 
-/* remove this line 
 // GSP settings
 grails {
     views {
@@ -67,4 +66,3 @@ grails {
         }
     }
 }
-remove this line */
