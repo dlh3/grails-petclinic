@@ -52,7 +52,7 @@ class OwnerController {
 			return [id: params.id]
 		}
 
-		def owners = Owner.findAllByLastName(params.lastName)
+		def owners = params.lastName == '*' ? Owner.list(sort: 'lastName') : Owner.findAllByLastName(params.lastName)
 		if (!owners) {
 			return [id: params.lastName, message: 'owners.not.found']
 		}
