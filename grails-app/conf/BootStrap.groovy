@@ -45,8 +45,8 @@ class BootStrap {
 			def dogType = PetType.findByName('dog')
 
 			// Pets
-			new Pet(name: 'Jack', type: dogType, owner: owner1, birthDate: new Date()).save(failOnError: true)
-			new Pet(name: 'Coco', type: dogType, owner: owner1, birthDate: new Date()).save(failOnError: true)
+			new Pet(name: 'Jack', type: dogType, owner: owner1).save(failOnError: true)
+			new Pet(name: 'Coco', type: dogType, owner: owner1).save(failOnError: true)
 		}
 	}
 }

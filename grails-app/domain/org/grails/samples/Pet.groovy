@@ -8,7 +8,7 @@ package org.grails.samples
 class Pet {
 
 	String name
-	Date birthDate
+	Date birthDate = new Date();
 	PetType type
 	Owner owner
 
