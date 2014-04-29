@@ -17,7 +17,7 @@ class OwnerTagLib {
 			<td>
 		"""
 
-		for (def pet : owner.pets.sort{ a, b -> a.name.compareTo(b.name) }) {
+		for (def pet : owner.pets.sort{ a, b -> a.name <=> b.name }) {
 			out <<
 			"""
 				${pet.name} (${pet.type.name})
