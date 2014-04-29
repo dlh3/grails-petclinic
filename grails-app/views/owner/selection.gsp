@@ -9,19 +9,15 @@
 
 		<table>
 			<thead>
-			<tr>
-				<th>Name</th>
-				<th>Address</th>
-				<th>City</th>
-				<th>Telephone</th>
-				<th>Pets</th>
-			</tr>
-			</thead>
-			<g:each var="owner" in="${owners}">
 				<tr>
-					<owner:entry owner="${owner}"/>
+					<th>Name</th>
+					<th>Address</th>
+					<th>City</th>
+					<th>Telephone</th>
+					<th>Pets</th>
 				</tr>
-			</g:each>
+			</thead>
+			<g:render template="selectOwnerRow" collection="${owners}" var="ownerBean" />
 		</table>
 	</body>
 </html>
